@@ -33,7 +33,7 @@ yarn dev:server
 yarn build
 ```
 
-# Scripts 👨‍💻
+# Package.json Scripts 📦
 in your package.json files you will find a few more scripts, these scripts use the TypeORM CLI to manage your database
 
 1. typeorm:create-mi --> creates a migration wich name you put in the end of the command:
