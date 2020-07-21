@@ -36,22 +36,22 @@ yarn build
 # Package.json Scripts 📦
 in your package.json files you will find a few more scripts, these scripts use the TypeORM CLI to manage your database
 
-1. typeorm:create-mi --> creates a migration wich name you put in the end of the command:
+#### 1. typeorm:create-mi --> creates a migration wich name you put in the end of the command:
 ```bash
 yarn typeorm:create-mi YouMigrationNameHere
 ```
 
-2. typeorm:run-mi --> executes the "up" method of all the new migrations
+#### 2. typeorm:run-mi --> executes the "up" method of all the new migrations
 ```bash
 yarn typeorm:run-mi
 ```
 
-3. typeorm:revert-mi --> executes the "down" method of all the new migrations
+#### 3. typeorm:revert-mi --> executes the "down" method of all the new migrations
 ```bash
 yarn typeorm:revert-mi
 ```
 
-4. typeorm:show-mi --> show all the migrations that have been executed
+#### 4. typeorm:show-mi --> show all the migrations that have been executed
 ```bash
 yarn typeorm:show-mi
 ```
