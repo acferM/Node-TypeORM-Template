@@ -1,16 +1,17 @@
-# NodeJS Template
+# Node + TypeORM Template
 
-## Ready to code
+## Ready to code 😃
 this project has:
 - tsconfig.json,
 - prettier.config.js,
+- ormconfig.json
 - .eslintrc.json,
 - .eslintignore
 - .editorconfig
 
 all already configurated
 
-# How to use it
+# How to use it 😤
 all you have to do is:
 
 1. on your terminal clone this repository and acess it using:
@@ -32,9 +33,32 @@ yarn dev:server
 yarn build
 ```
 
-## Configs
+# Scripts 👨‍💻
+in your package.json files you will find a few more scripts, these scripts use the TypeORM CLI to manage your database
 
-### Eslint:
+1. typeorm:create-mi --> creates a migration wich name you put in the end of the command:
+```bash
+yarn typeorm:create-mi YouMigrationNameHere
+```
+
+2. typeorm:run-mi --> executes the "up" method of all the new migrations
+```bash
+yarn typeorm:run-mi
+```
+
+3. typeorm:revert-mi --> executes the "down" method of all the new migrations
+```bash
+yarn typeorm:revert-mi
+```
+
+4. typeorm:show-mi --> show all the migrations that have been executed
+```bash
+yarn typeorm:show-mi
+```
+
+# Configs ⚙
+
+## Eslint:
 this is the content of the .eslintrc.json:
 
 ```json
@@ -66,7 +90,8 @@ this is the content of the .eslintrc.json:
         "ts": "never"
       }
     ],
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "class-methods-use-this": "off"
   },
   "settings": {
     "import/resolver": {
@@ -146,7 +171,7 @@ this is the content of the tsconfig.json
     // "strictNullChecks": true,              /* Enable strict null checks. */
     // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
     // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
-    // "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
+    "strictPropertyInitialization": false,  /* Enable strict checking of property initialization in classes. */
     // "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */
     // "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
 
@@ -175,8 +200,8 @@ this is the content of the tsconfig.json
     // "inlineSources": true,                 /* Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set. */
 
     /* Experimental Options */
-    // "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
-    // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
+    "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
+    "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
 
     /* Advanced Options */
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
@@ -184,3 +209,57 @@ this is the content of the tsconfig.json
   }
 }
 ```
+
+## TypeORM
+this is the content of the ormconfig.json
+```json
+{
+  "type": "", // <-- your database type EX: postgres
+  "host": "localhost", // <-- where is your connection made EX: localhost:3333
+  "port": 0, // <-- port used by your computer to connect it to the docker container
+  "username": "", // <-- username of your docker container
+  "password": "", // <-- password choosed by you on the creation of the docker container
+  "database": "", // <-- database name
+  "entities": [
+    "./src/models/*.ts" // <-- path to the entities paste
+  ],
+  "migrations": [
+    "./src/database/migrations/*.ts" // <-- path to the migrations paste
+  ],
+  "cli": {
+    "migrationsDir": "./src/database/migrations" // <-- path to the migrations paste (helps de typeORM cli)
+  }
+}
+```
+
+# Why TypeORM ? 🤔
+
+1. The TypeORM uses the ORM (Object Realational Mapping) wich makes the creation of a SOLID based API **MUCH** easier because of it's own repository and easy way to make models e make relations between models.
+
+2. TypeORM is very easy to connect with a DB using the ormconfig.json.
+
+3. TypeORM uses migrations wich makes team work more organized.
+
+4. TypeORM uses Knex.js behind the scenes wich makes possible to write DB queries using JS, with that we can write the same query an use it in **ALL** the databases.
+
+
+
+
+
+# Documentation 📄
+
+## [NodeJS](https://nodejs.org/en/docs/)
+
+## [Express.js](https://expressjs.com/)
+
+## [TypesScript](https://www.typescriptlang.org/docs/home.html)
+
+## [TypeORM](https://typeorm.io/#/)
+
+## [Docker](https://docs.docker.com/)
+
+## [EditorConfig](https://editorconfig.org/#overview)
+
+## [Prettier](https://prettier.io/docs/en/index.html)
+
+## [Eslint](https://eslint.org/)

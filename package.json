@@ -5,10 +5,17 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev:server": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
+    "dev:server": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "typeorm:create-mi": "ts-node-dev ./node_modules/typeorm/cli.js migration:create -n",
+    "typeorm:run-mi": "ts-node-dev ./node_modules/typeorm/cli.js migration:run",
+    "typeorm:revert-mi": "ts-node-dev ./node_modules/typeorm/cli.js migration:revert",
+    "typeorm:show-mi": "ts-node-dev ./node_modules/typeorm/cli.js migration:show"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.3.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.25"
   },
   "devDependencies": {
     "@types/express": "^4.17.7",

@@ -1,0 +1,17 @@
+{
+  "type": "",
+  "host": "localhost",
+  "port": 0,
+  "username": "",
+  "password": "",
+  "database": "",
+  "entities": [
+    "./src/models/*.ts"
+  ],
+  "migrations": [
+    "./src/database/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
+}
