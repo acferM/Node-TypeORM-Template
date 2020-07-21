@@ -234,16 +234,13 @@ this is the content of the ormconfig.json
 
 # Why TypeORM ? 🤔
 
-1. The TypeORM uses the ORM (Object Realational Mapping) wich makes the creation of a SOLID based API **MUCH** easier because of it's own repository and easy way to make models e make relations between models.
+#### 1. The TypeORM uses the ORM (Object Realational Mapping) wich makes the creation of a SOLID based API **MUCH** easier because of it's own repository and easy way to make models e make relations between models.
 
-2. TypeORM is very easy to connect with a DB using the ormconfig.json.
+#### 2. TypeORM is very easy to connect with a DB using the ormconfig.json.
 
-3. TypeORM uses migrations wich makes team work more organized.
+#### 3. TypeORM uses migrations wich makes team work more organized.
 
-4. TypeORM uses Knex.js behind the scenes wich makes possible to write DB queries using JS, with that we can write the same query an use it in **ALL** the databases.
-
-
-
+#### 4. TypeORM uses Knex.js behind the scenes wich makes possible to write DB queries using JS, with that we can write the same query an use it in **ALL** the databases.
 
 
 # Documentation 📄
